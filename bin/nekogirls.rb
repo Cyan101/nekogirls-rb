@@ -3,12 +3,14 @@ require 'date'
 require 'sinatra'
 require 'haml'
 
+require_relative 'config.rb'
+
+set :bind, $ip
 set :port, 8080
 set :static, true
 # set :public_folder, 'static'
 set :views, 'views'
 
-require_relative 'config.rb'
 
 get '/' do
   '<h2> Personal image hosting website <a href="https://github.com/Cyan101/nekogirls-rb">Nekogirls-rb</a></h2>'
