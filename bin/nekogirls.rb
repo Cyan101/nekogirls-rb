@@ -26,7 +26,7 @@ get '/upload/?' do
 end
 
 post '/upload/?' do
-  fileid = get_unqiue_id
+  fileid = unique_id
   filetype = File.extname(params['file_to_upload'][:filename])
   unless $banned_ext.include?(filetype.downcase)
     File.open('./public/p/' + fileid + filetype, 'w') do |f|
@@ -44,7 +44,7 @@ end
 
 
 #---------------------------------------------------
-def get_unqiue_id
+def unique_id
   return DateTime.now.strftime('%Q').to_i.to_s52
 end
 
