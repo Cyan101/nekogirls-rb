@@ -1,0 +1,9 @@
+!!!
+%html
+  %body
+    %h1 File uploader!
+    %form(method='post' enctype='multipart/form-data')
+      %input(type='file' name='file_to_upload' id='file_to_upload')
+      %br
+      %input(type='hidden' name='code' value='')
+      %input(type='submit' value='Upload!')
