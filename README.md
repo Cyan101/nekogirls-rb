@@ -1,6 +1,12 @@
 #Nekogirls-rb
 
 
+#To Do
+* Add ReadMe info
+* Make custom home/404 pages
+* Redirect to image after its uploaded
+* Setup special code to make the website Personal
+
 ##ShareX Example
 ```
 {
@@ -13,3 +19,4 @@
   },
   "ResponseType": "Text"
 }
+```
