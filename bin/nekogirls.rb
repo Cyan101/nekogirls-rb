@@ -33,7 +33,7 @@ post '/upload/?' do
       f.write(params['file_to_upload'][:tempfile].read)
     end
   end
-  return "#{$domain}/#{$savefolder}/#{fileid}#{filetype}"
+  return "http://#{$domain}/#{$savefolder}/#{fileid}#{filetype.downcase}"
 end
 
 not_found do
