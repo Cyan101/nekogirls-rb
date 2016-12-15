@@ -6,7 +6,7 @@ require 'haml'
 require_relative 'config.rb'
 
 set :bind, $ip
-set :port, 8080
+set :port, 80
 set :static, true
 # set :public_folder, 'static'
 set :views, 'views'
