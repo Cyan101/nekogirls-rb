@@ -23,7 +23,7 @@ get '/upload/?' do
   haml :upload, format: :html5
 end
 
-post '/upload' do
+post '/upload/?' do
   fileid = get_unqiue_id
   filetype = File.extname(params['file_to_upload'][:filename])
   unless $banned_ext.include?(filetype.downcase)
