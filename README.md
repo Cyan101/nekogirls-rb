@@ -6,6 +6,7 @@
 * Make custom home/404 pages
 * Redirect to image after its uploaded
 * Setup special code to make the website Personal
+* Damn favicon
 
 ##ShareX Example
 ```
