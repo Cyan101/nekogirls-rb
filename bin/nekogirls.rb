@@ -14,11 +14,19 @@ set :views, 'views'
 
 get '/' do
   '<h2> Personal image hosting website <a href="https://github.com/Cyan101/nekogirls-rb">Nekogirls-rb</a></h2>'
-  # Temporary "Home" Page
+  #haml :index, format: :html5
 end
 
 get '/p/:file' do
   send_file('./public/p/' + params[:file])
+end
+
+get '/catgirls/:file' do
+  send_file('./public/catgirls/' + params[:file])
+end
+
+get '/css/:file' do
+  send_file('./public/css/' + params[:file])
 end
 
 get '/upload/?' do
