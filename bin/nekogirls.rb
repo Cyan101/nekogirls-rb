@@ -11,10 +11,9 @@ set :static, true
 # set :public_folder, 'static'
 set :views, 'views'
 
-
 get '/' do
   '<h2> Personal image hosting website <a href="https://github.com/Cyan101/nekogirls-rb">Nekogirls-rb</a></h2>'
-  #haml :index, format: :html5
+  # haml :index, format: :html5
 end
 
 get '/*/:file' do
@@ -41,18 +40,17 @@ not_found do
   '<h2>shit erm... we seem to have lost that page....</h2>' # Temporary 404 Page
 end
 
-
-
 #---------------------------------------------------
 def unique_id
-  return DateTime.now.strftime('%Q').to_i.to_s52
+  DateTime.now.strftime('%Q').to_i.to_s52
 end
 
 class Numeric
-  Alpha52 = ("a".."z").to_a + ("A".."Z").to_a
+  Alpha52 = ('a'..'z').to_a + ('A'..'Z').to_a
   def to_s52
-    return "" if self < 1
-    s, q = "", self
+    return '' if self < 1
+    s = ''
+    q = self
     loop do
       q, r = (q - 1).divmod(52)
       s.prepend(Alpha52[r])
