@@ -5,14 +5,14 @@ Nekogirls-rb is a pomf-like website built in Ruby and Sinatra,
 
 
 #To Do
-* Add ReadMe info
-* Make custom home/404 pages
+* Add Readme setup/usage
+* Make custom 404 page
 * Redirect to image after its uploaded
 * Setup special code to make the website Personal
 * Damn favicon
 
 #Setup/Usage
-The following files need to be modified for your own theme/site
+The following files need to be created and uncommented out from `nekogirls.rb`
 * views/index.haml
 The config file is pretty self explanatory and has code comments to help
 
