@@ -17,16 +17,8 @@ get '/' do
   #haml :index, format: :html5
 end
 
-get '/p/:file' do
-  send_file('./public/p/' + params[:file])
-end
-
-get '/catgirls/:file' do
-  send_file('./public/catgirls/' + params[:file])
-end
-
-get '/css/:file' do
-  send_file('./public/css/' + params[:file])
+get '/*/:file' do
+  send_file("./public/#{params['splat'].first}/" + params[:file])
 end
 
 get '/upload/?' do
