@@ -14,6 +14,7 @@ Nekogirls-rb is a pomf-like website built in Ruby and Sinatra,
 #Setup/Usage
 The following files need to be created and uncommented out from `nekogirls.rb`
 * views/index.haml
+* views/404.haml
 The config file is pretty self explanatory and has code comments to help
 
 ##ShareX Example
