@@ -10,6 +10,7 @@ set :port, 80
 set :static, true
 # set :public_folder, 'static'
 set :views, 'views'
+set :environment, :development # Change this to :production when ready
 
 get '/' do
   '<h2> Personal image hosting website <a href="https://github.com/Cyan101/nekogirls-rb">Nekogirls-rb</a></h2>'
@@ -37,7 +38,8 @@ end
 
 not_found do
   status 404
-  '<h2>shit erm... we seem to have lost that page....</h2>' # Temporary 404 Page
+  '<h2>shit erm... we seem to have lost that page....</h2>'
+  # haml :404, format: :html5
 end
 
 #---------------------------------------------------
