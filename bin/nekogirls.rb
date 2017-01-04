@@ -29,6 +29,7 @@ post '/upload/?' do
   fileid = unique_id
   filetype = File.extname(params['file_to_upload'][:filename])
   unless $banned_ext.include?(filetype.downcase)
+    return 'Invalid server access code' unless params['code'] == $servercode
     File.open('./public/p/' + fileid + filetype, 'w') do |f|
       f.write(params['file_to_upload'][:tempfile].read)
     end
