@@ -30,3 +30,26 @@ The config file is pretty self explanatory and has code comments to help
   "ResponseType": "Text"
 }
 ```
+
+##Using Nginx to serve files example
+Probably not a great example since its assuming you are just using a root user on your server.
+
+You'll need to change the locations, the proxy pass (since nginx will handle the website domain and port 80) and the names of the folders and files.
+
+```
+server {
+        listen 80;
+        server_name nekogirls.moe;
+        root /root/nekogirls-rb/public;
+        access_log /var/log/nginx/nekogirls-rb-access.log;
+        error_log /var/log/nginx/nekogirls-rb-error.log;
+        location /p/ {
+                try_files $uri $uri/ =404;
+        }
+        location /css/ {
+                try_files $uri $uri/ =404;
+        }
+        location / {
+                proxy_pass http://localhost:8080;
+        }
+}```

@@ -17,6 +17,7 @@ get '/' do
   # haml :index, format: :html5
 end
 
+# Disable this if Nginx is serving files for you
 get '/*/:file' do
   send_file("./public/#{params['splat'].first}/" + params[:file])
 end
