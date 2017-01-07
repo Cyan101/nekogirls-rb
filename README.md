@@ -54,4 +54,6 @@ server {
         }
 }```
 
-also you can checkout [this guide](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-14-04) for setting up https (just remember to edit the link returned by the server)
+This is also the best way to limit file sizes by using `client_max_body_size 5m;` for example to limit the size to 5mb
+
+Also you can checkout [this guide](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-14-04) for setting up https (just remember to edit the link returned by the server)
