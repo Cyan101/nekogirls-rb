@@ -35,6 +35,7 @@ post '/upload/?' do
       f.write(params['file_to_upload'][:tempfile].read)
     end
   end
+  # Manually put the domain here if Nginx is serving the files as your config should be localhost:8080
   return "http://#{$domain}/#{$savefolder}/#{fileid}#{filetype.downcase}"
 end
 

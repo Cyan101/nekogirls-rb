@@ -34,7 +34,7 @@ The config file is pretty self explanatory and has code comments to help
 ##Using Nginx to serve files example
 Probably not a great example since its assuming you are just using a root user on your server.
 
-You'll need to change the locations, the proxy pass (since nginx will handle the website domain and port 80) and the names of the folders and files.
+You'll need to change the locations, the proxy pass (since nginx will handle the website domain and port 80), the return link for uploads and the names of the folders and files.
 
 ```
 server {
