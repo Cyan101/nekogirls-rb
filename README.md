@@ -53,3 +53,5 @@ server {
                 proxy_pass http://localhost:8080;
         }
 }```
+
+also you can checkout [this guide](https://www.digitalocean.com/community/tutorials/how-to-secure-nginx-with-let-s-encrypt-on-ubuntu-14-04) for setting up https (just remember to edit the link returned by the server)
