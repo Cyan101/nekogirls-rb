@@ -52,7 +52,8 @@ server {
         location / {
                 proxy_pass http://localhost:8080;
         }
-}```
+}
+```
 
 This is also the best way to limit file sizes by using `client_max_body_size 5m;` for example to limit the size to 5mb
 
