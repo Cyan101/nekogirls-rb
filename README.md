@@ -22,7 +22,7 @@ The config file is pretty self explanatory and has code comments to help
 {
   "Name": "nekogirls.moe",
   "RequestType": "POST",
-  "RequestURL": "http://nekogirls.moe/upload",
+  "RequestURL": "https://nekogirls.moe/upload",
   "FileFormName": "file_to_upload",
   "Arguments": {
     "code": "SpecialCodeGoesHere"
