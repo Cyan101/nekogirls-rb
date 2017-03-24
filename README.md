@@ -49,6 +49,9 @@ server {
         location /css/ {
                 try_files $uri $uri/ =404;
         }
+        location /js/ {
+                try_files $uri $uri/ =404;
+        }
         location / {
                 proxy_pass http://localhost:8080;
         }

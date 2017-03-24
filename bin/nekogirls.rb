@@ -39,6 +39,24 @@ post '/upload/?' do
   return "http://#{$domain}/#{$savefolder}/#{fileid}#{filetype.downcase}"
 end
 
+get '/copypaste/?' do
+ File.read('views/copypaste.html')
+end
+
+post '/copypaste/?' do
+  fileid = unique_id
+  text_to_decode = params['text_to_decode']
+  text_base64 = text_to_decode.split(',')
+  filetype = '.' + text_base64[0][11..-8]
+  unless $banned_ext.include?(filetype.downcase)
+    File.open('./public/p/' + fileid +  filetype, 'wb') do |f|
+      f.write(Base64.decode64(text_base64[1]))
+    end
+  end
+  return "https://#{$domain}/#{$savefolder}/#{fileid}#{filetype}"
+  #redirect to("#{$savefolder}/#{fileid}#{filetype}")
+end
+
 not_found do
   status 404
   '<h2>shit erm... we seem to have lost that page....</h2>'
