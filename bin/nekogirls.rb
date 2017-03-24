@@ -35,7 +35,7 @@ post '/upload/?' do
       f.write(params['file_to_upload'][:tempfile].read)
     end
   end
-  redirect to("#{$savefolder}/#{fileid}#{filetype.downcase}")
+  redirect to("#{$savefolder}/#{fileid}#{filetype}")
 end
 
 get '/copypaste/?' do
