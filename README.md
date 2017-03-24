@@ -27,7 +27,7 @@ The config file is pretty self explanatory and has code comments to help
   "Arguments": {
     "code": "SpecialCodeGoesHere"
   },
-  "ResponseType": "Text"
+  "ResponseType": "RedirectionURL"
 }
 ```
 
