@@ -36,7 +36,7 @@ post '/upload/?' do
     end
   end
   # Manually put the domain here if Nginx is serving the files as your config should be localhost:8080
-  return "http://#{$domain}/#{$savefolder}/#{fileid}#{filetype.downcase}"
+  return "#{$httptype}://#{$domain}/#{$savefolder}/#{fileid}#{filetype.downcase}"
 end
 
 get '/copypaste/?' do
@@ -53,7 +53,7 @@ post '/copypaste/?' do
       f.write(Base64.decode64(text_base64[1]))
     end
   end
-  return "https://#{$domain}/#{$savefolder}/#{fileid}#{filetype}"
+  return "#{$httptype}://#{$domain}/#{$savefolder}/#{fileid}#{filetype}"
   #redirect to("#{$savefolder}/#{fileid}#{filetype}")
 end
 
