@@ -39,6 +39,7 @@ You'll need to change the locations, the proxy pass (since nginx will handle the
 ```
 server {
         listen 80;
+        expires 30d;
         server_name nekogirls.moe;
         root /root/nekogirls-rb/public;
         access_log /var/log/nginx/nekogirls-rb-access.log;
